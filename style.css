@@ -1,4 +1,7 @@
-.slide {
+.slide,.header,.odd {
     text-align: right;
     direction: rtl;
+}
+ul {
+    padding-right: 40px;
 }

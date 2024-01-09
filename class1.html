@@ -30,6 +30,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="class1_files/libs/revealjs/dist/theme/quarto.css">
   <link rel="stylesheet" href="style.css">
@@ -322,6 +387,8 @@
       margin-right: 0; 
     }
   </style>
+  <script type="module" src="class1_files/libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+  <link href="class1_files/libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -340,31 +407,204 @@
 
   <p class="date">2024-01-14</p>
 </section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="15" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 14;"><span id="cb1-15"><a href=""></a>now <span class="op">=</span> <span class="kw">new</span> <span class="bu">Date</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</section>
 <section id="מידע" class="slide level2">
 <h2>מידע</h2>
-<p><a href="https://he.wiktionary.org/wiki/%D7%9E%D7%99%D7%93%D7%A2">אוסף פרטים לגבי ישויות.</a></p>
-<p>ידע מאורגן.</p>
+<p><a href="https://he.wiktionary.org/wiki/%D7%9E%D7%99%D7%93%D7%A2">אוסף פרטים לגבי ישויות</a> בצורה מאורגנת</p>
+<h4 id="דוגמא-לידע-לא-מאורגן">דוגמא לידע לא מאורגן</h4>
+<p>שלמה הוא סטודנט בן 23 מתל אביב שלומד בתל חי.</p>
+<h4 id="דוגמא-לידע-מאורגן">דוגמא לידע מאורגן</h4>
+<table>
+<thead>
+<tr class="header">
+<th>מזהה</th>
+<th>שם</th>
+<th>גיל</th>
+<th>עיסוק</th>
+<th>מקום מגורים</th>
+<th>מקום לימודים</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>שלמה</td>
+<td>23</td>
+<td>סטודנט</td>
+<td>תל אביב</td>
+<td>מכללת תל חי</td>
+</tr>
+</tbody>
+</table>
 <h3 id="מאגר-מידע">מאגר מידע</h3>
+<p>קיבוץ של מספר מסוים של פרטי מידע.</p>
 </section>
 <section id="מערכת" class="slide level2">
 <h2>מערכת</h2>
 <p><a href="https://he.wiktionary.org/wiki/%D7%9E%D7%A2%D7%A8%D7%9B%D7%AA">מתקן המורכב מאוסף אלמנטים הפועלים יחד לשם ביצוע פעולה כלשהי, ושלא ניתנים לחלוקה לשתי קבוצות בלתי תלויות.</a></p>
 </section>
-<section id="גאוגרפיה" class="slide level2">
-<h2>גאוגרפיה</h2>
-</section>
 <section id="מערכת-מידע" class="slide level2">
 <h2>מערכת מידע</h2>
+<p>תוכנת מחשב המאפשרת ארגון, אחסון, ניהול ועיבוד של מידע.</p>
+<p>ארגון מידע יכול להתבצע במגוון דרכים:</p>
+</section>
+<section id="טבלה" class="slide level2">
+<h2>טבלה</h2>
+<table>
+<thead>
+<tr class="header">
+<th>מזהה</th>
+<th>שם</th>
+<th>גיל</th>
+<th>עיסוק</th>
+<th>מקום מגורים</th>
+<th>מקום לימודים</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>שלמה</td>
+<td>23</td>
+<td>סטודנט</td>
+<td>תל אביב</td>
+<td>מכללת תל חי</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="רשימה" class="slide level2">
+<h2>רשימה</h2>
+<ul>
+<li><p>ביצים</p></li>
+<li><p>חלב</p></li>
+<li><p>נקניקים</p></li>
+</ul>
+</section>
+<section id="רשימה-מקוננת" class="slide level2">
+<h2>רשימה מקוננת</h2>
+<ul>
+<li><p>שלמה</p>
+<ul>
+<li><p>גיל: 23</p></li>
+<li><p>עיסוק: סטודנט</p></li>
+<li><p>מקום מגורים: תל אביב</p></li>
+<li><p>מקום לימודים: מכללת תל חי</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="רשת" class="slide level2">
+<h2>רשת</h2>
+
+<img data-src="https://upload.wikimedia.org/wikipedia/commons/5/58/Rdf_graph_for_Eric_Miller.png" width="571" class="r-stretch quarto-figure-center"><p class="caption">By W3C - http://www.w3.org/TR/rdf-primer/fig1dec16.png, Attribution, https://commons.wikimedia.org/w/index.php?curid=6218192</p></section>
+<section id="מטריצה" class="slide level2">
+<h2>מטריצה</h2>
+
+<img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/MatrixLabelled.svg/1280px-MatrixLabelled.svg.png" width="254" class="r-stretch quarto-figure-center"><p class="caption">By Mavaddat - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=126575964</p><pre><code>בקורס זה נתמקד בשתי דרכים לייצוג מידע - טבלה ומטריצה. על כך בהמשך.</code></pre>
+</section>
+<section id="גאוגרפיה" class="slide level2">
+<h2>גאוגרפיה</h2>
+<p>תיאור מיקום של ישויות על פני כדור הארץ. (גאו - כדור הארץ. גרפיה - תיאור, רישום)</p>
+<h4 id="מה-גאוגרפיה-לא">מה גאוגרפיה לא</h4>
+<p>גאוגרפיה אינה מדע, לוגיה. היא רישום של ישויות ויחסי הגומלין ביניהן במרחב.</p>
+<p>גאוגרפיה מאפשרת את הדיבור על מדעי המרחב; עם זאת, התפקיד שלה דומה לתפקיד של שפה.</p>
 </section>
 <section id="מידע-גאוגרפי" class="slide level2">
 <h2>מידע גאוגרפי</h2>
+<p>אוסף פרטים לגבי ישויות המכיל התייחסות למיקום על גבי כדור הארץ.</p>
+<p>עדו נמצא עכשיו בירושלים</p>
+<table>
+<thead>
+<tr class="header">
+<th>מזהה רשומה</th>
+<th>שם ישות</th>
+<th>זמן</th>
+<th>מיקום</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>עדו</td>
+<td><span><span id="ojs-element-id-1"></span></span></td>
+<td>ירושלים</td>
+</tr>
+</tbody>
+</table>
+<p>עדו נמצא עכשיו במיקום מסוים על רשת מסוימת</p>
+<table>
+<thead>
+<tr class="header">
+<th>מזהה רשומה</th>
+<th>שם ישות</th>
+<th>זמן</th>
+<th>x</th>
+<th>y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>עדו</td>
+<td><span><span id="ojs-element-id-2"></span></span></td>
+<td>219219</td>
+<td>629587</td>
+</tr>
+</tbody>
+</table>
+<p>ביתו של עדו נמצא בירושלים</p>
+<table>
+<thead>
+<tr class="header">
+<th>מזהה רשומה</th>
+<th>סוג נכס</th>
+<th>כתובת</th>
+<th>בעלים</th>
+<th>דיירים</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>דירה</td>
+<td>לא חשוב</td>
+<td>לא חשוב</td>
+<td>עדו</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="מערכת-מידע-גאוגרפי" class="slide level2">
 <h2>מערכת מידע גאוגרפי</h2>
+<p>תוכנת מחשב המאפשרת ארגון, אחסון, ניהול ועיבוד של מידע המכיל רכיבים גאוגרפיים</p>
+</section>
+<section id="אנחנו-לא-מחשבים." class="slide level2">
+<h2>אנחנו לא מחשבים.</h2>
+<p>הרבה יותר נוח לנו לקרוא מידע בצורה נוחה, כמו ממפות ממוחשבות.</p>
+<iframe width="780" height="500" src="https://geo.mot.gov.il/" title="Quarto Documentation" \=""></iframe>
+</section>
+<section id="אקולוגיה" class="slide level2">
+<h2>אקולוגיה</h2>
+<p>תגידו אתם.</p>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
+</div>
+<div class="ojs-auto-generated hidden">
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6WyAgeyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiaW5saW5lIjoidHJ1ZSIsInNvdXJjZSI6Imh0bC5odG1sYDxzcGFuPiR7bm93fTwvc3Bhbj5gIiwgImNlbGxOYW1lIjoib2pzLWVsZW1lbnQtaWQtMSJ9LCAgeyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiaW5saW5lIjoidHJ1ZSIsInNvdXJjZSI6Imh0bC5odG1sYDxzcGFuPiR7bm93fTwvc3Bhbj5gIiwgImNlbGxOYW1lIjoib2pzLWVsZW1lbnQtaWQtMiJ9XX0=
+</script>
 </div>
 </section>
     </div>
@@ -418,7 +658,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -576,6 +816,17 @@
           RevealZoom
         ]
       });
+    </script>
+    <script type="ojs-module-contents">
+    eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Im5vdyA9IG5ldyBEYXRlXHJcbiJ9XX0=
+    </script>
+    <script type="module">
+    if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+    window._ojs.paths.runtimeToDoc = "../../..";
+    window._ojs.paths.runtimeToRoot = "../../..";
+    window._ojs.paths.docToRoot = "";
+    window._ojs.selfContained = false;
+    window._ojs.runtime.interpretFromScriptTags();
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
