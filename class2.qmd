@@ -1,0 +1,17 @@
+---
+title: "יסודות מידע מרחבי, שימוש בסיסי ב-qgis"
+author: 'ד"ר עדו קליין'
+date: 01/21/2024
+format:
+  revealjs:
+    rtl: true
+    css: "style.css"
+    slide-number: true
+    show-slide-number: all
+editor: visual
+---
+
+```{ojs}
+//| echo: false
+now = new Date
+```
