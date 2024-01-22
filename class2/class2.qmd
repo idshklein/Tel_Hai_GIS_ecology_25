@@ -1,7 +1,7 @@
 ---
 title: "יסודות מידע מרחבי, שימוש בסיסי ב-qgis"
 author: 'ד"ר עדו קליין'
-date: 01/21/2024
+date: 01/22/2024
 format:
   revealjs:
     rtl: true
