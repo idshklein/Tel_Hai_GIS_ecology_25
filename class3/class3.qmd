@@ -94,11 +94,13 @@ $$
 
 ישנם מספר סוגים שונים של היטלים:
 
--   היטל חרוטי
-
 -   היטל גלילי
 
+-   היטל חרוטי
+
 -   היטל אזימוטלי
+
+![](https://upload.wikimedia.org/wikipedia/commons/c/c1/Comparison_of_cartography_surface_development.svg){fig-alt="By cmglee, US government, Clindberg, Palosirkka - Globe Atlantic.svg, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=84845850" width="502"}
 
 ------------------------------------------------------------------------
 
@@ -120,7 +122,7 @@ $$
 
 ![By Jakub Nowosad - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=73955926](https://upload.wikimedia.org/wikipedia/commons/e/ee/Worlds_animate.gif)
 
-## שני סרטונים שאי אפשר בלעדיהם,אבל נראה רק את השני
+## שני סרטונים שאי אפשר בלעדיהם
 
 {{< video https://www.youtube.com/embed/vVX-PrBRtTY width="900" height="630" title="Gall--Peters Projection">}}
 
