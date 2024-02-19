@@ -109,6 +109,7 @@ now = new Date
 [הורידו את הסגנון מכאן](https://www.gov.il/he/departments/general/symbology_qgis)
 
 ![](images/paste-5.png)
+------------------------------------------------------------------------
 
 ![](images/paste-14.png)
 
