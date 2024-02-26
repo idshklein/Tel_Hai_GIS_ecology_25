@@ -106,6 +106,8 @@ now = new Date
 
 ![](images/paste-12.png){width="756"}
 
+----
+
 לחיצה על כפתור ימני תאפשר ![](images/paste-13.png):
 
 בחירה בכל הישויות
