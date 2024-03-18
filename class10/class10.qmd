@@ -128,7 +128,7 @@ now = new Date
 
 דברים שמגלים באמצעות מיפוי כזה - רחוב ירמיהו בירושלים היה פעם בכלל במקום אחר.
 
-![](images/paste-10.png){width="434"}
+![](images/paste-10.png){width="363"}
 
 ## שמירת שכבה רסטרית בgpkg
 
@@ -146,16 +146,14 @@ save as
 
 ## תרגיל 9
 
-1.  הורידו מפה של ירושלים בארץ מ[אוסף המפות על שם ערן לאור](https://merhav.nli.org.il/primo-explore/search?query=any,contains,%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99%D7%9D%20MAP&sortby=lso01&vid=NLI&facet=searchcreationdate,include,1922%7C,%7C1948&mfacet=tlevel,include,online_resources,1&mfacet=topic,include,Jerusalem%20(Israel),1&mfacet=creator,include,Survey%20of%20Palestine,2&mfacet=creator,include,Great%20Britain%20Ordnance%20Survey,2&mfacet=creator,include,Egypt%20Ma%E1%B9%A3la%E1%B8%A5at%20al-Mis%C4%81%E1%B8%A5ah,2&mfacet=creator,include,Great%20Britain%20War%20Office%20General%20Staff%20Geographical%20Section,2&mfacet=rtype,include,Map,3&lang=iw_IL&offset=0&came_from=sort&_gl=1*1vqiiuv*_ga*MTEzMDU0NTE1LjE2ODc0NjMzMjM.*_ga_8P5PPG5E6Z*MTcxMDY2NDc4OS40Ni4xLjE3MTA2NjUyNDIuNDIuMC4w*_ga_4207HLQSXF*MTcxMDY2NDc4OS40Ni4xLjE3MTA2NjUyNDIuNDIuMC4w*_ga_8PQRSYT854*MTcxMDY2NDc4OS40Ni4xLjE3MTA2NjUyNDIuNDIuMC4w)
+1.  הורידו מפה של ירושלים מ[אוסף המפות על שם ערן לאור](https://merhav.nli.org.il/primo-explore/search?query=any,contains,%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99%D7%9D%20MAP&sortby=lso01&vid=NLI&facet=searchcreationdate,include,1922%7C,%7C1948&mfacet=tlevel,include,online_resources,1&mfacet=topic,include,Jerusalem%20(Israel),1&mfacet=creator,include,Survey%20of%20Palestine,2&mfacet=creator,include,Great%20Britain%20Ordnance%20Survey,2&mfacet=creator,include,Egypt%20Ma%E1%B9%A3la%E1%B8%A5at%20al-Mis%C4%81%E1%B8%A5ah,2&mfacet=creator,include,Great%20Britain%20War%20Office%20General%20Staff%20Geographical%20Section,2&mfacet=rtype,include,Map,3&lang=iw_IL&offset=0&came_from=sort&_gl=1*1vqiiuv*_ga*MTEzMDU0NTE1LjE2ODc0NjMzMjM.*_ga_8P5PPG5E6Z*MTcxMDY2NDc4OS40Ni4xLjE3MTA2NjUyNDIuNDIuMC4w*_ga_4207HLQSXF*MTcxMDY2NDc4OS40Ni4xLjE3MTA2NjUyNDIuNDIuMC4w*_ga_8PQRSYT854*MTcxMDY2NDc4OS40Ni4xLjE3MTA2NjUyNDIuNDIuMC4w)
 2.  עגנו אותה באמצעות הגאורפרנסר
-3.  התחברו לסרויס של עיריית ירושלים
+3.  התחברו ל[סרויס של עיריית ירושלים](https://gisviewer.jerusalem.muni.il/arcgis/rest/services/)
 4.  הוסיפו את שכבת האנדרטאות
 5.  שמרו בפרויקט שבתוך gpkg את השכבה של המפה כשכבה רסטרית,
 6.  שמרו את סדר השכבות בפרויקט, כך ששכבת האנדרטאות נשאבת ישירות
 
-## סיכום הקורס
-
-למדנו על:
+## סיכום הקורס - למדנו על:
 
 -   מהו מידע מרחבי
 
@@ -179,15 +177,17 @@ save as
 
 התמיינו לקבוצות של עד 3 אנשים.
 
-בחרו נושא למיפוי מרחבי מרשימת הנושאים הבאה:
+בחרו נושא למיפוי מרחבי, למשל -
 
 -   בחינה של השוני בין שכונות בחיפה
 
 -   השוואה היסטורית של מבנים בשכונת רחביה בירושלים
 
--   
+או נושא שיאושר על ידי בפגישתנו.
 
--   או נושא שיאושר על ידי בפגישתנו.
+אנא התחלקו לקבוצות עד ה25.3, שלחו לי מייל הכולל את חברי הקבוצה.
+
+כל קבוצה תיקבע איתי פגישה לאישור הנושא ולבירור נוסף ככל שנצטרך
 
 ------------------------------------------------------------------------
 
