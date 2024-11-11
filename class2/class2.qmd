@@ -1,7 +1,7 @@
 ---
 title: "יסודות מידע מרחבי, שימוש בסיסי ב-qgis"
 author: 'ד"ר עדו קליין'
-date: 01/22/2024
+date: 11/11/24
 format:
   revealjs:
     rtl: true
@@ -333,7 +333,7 @@ df |>
 
 בשלב זה, נפתח את מיקום הקובץ שהורדנו בסייר הקבצים, ופשוט נגרור אותו לתוך התוכנה, כפי שמודגם בסרטון:
 
-![](images/Untitled%20video%20-%20Made%20with%20Clipchamp.gif){width="500"}
+![](images/Untitled video - Made with Clipchamp.gif){width="500"}
 
 ## שכבת בסיס
 
