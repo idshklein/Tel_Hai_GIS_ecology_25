@@ -1,7 +1,7 @@
 ---
 title: "מערכות קואורדינטות והיטלים"
 author: 'ד"ר עדו קליין'
-date: 01/29/2024
+date: 11/18/2024
 format:
   revealjs:
     rtl: true
