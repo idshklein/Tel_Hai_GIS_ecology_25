@@ -445,7 +445,7 @@
   a^2 + b^2 = c^2
 \]</span></p>
 <p>פיתגורס בעצם מאפשר לנו לדעת את המרחק בין שתי נקודות במרחב <strong>אוקלידי:</strong></p>
-<p>מרחב שטוח, בעל שלושה מימדים, ניתן להפנות לנקודה במרחב באמצעות המערכים עליהם דיברנו בשיעור הקודם <a href="https://idshklein.github.io/Tel_Hai_GIS_ecology_24/class2/class2.html#/%D7%9E%D7%94%D7%95-%D7%9E%D7%99%D7%93%D7%A2-%D7%95%D7%A7%D7%98%D7%95%D7%A8%D7%99">קישור</a></p>
+<p>מרחב שטוח, בעל שלושה מימדים, ניתן להפנות לנקודה במרחב באמצעות המערכים עליהם דיברנו בשיעור הקודם <a href="https://idshklein.github.io/Tel_Hai_GIS_ecology_25/class2/class2.html#/%D7%9E%D7%94%D7%95-%D7%9E%D7%99%D7%93%D7%A2-%D7%95%D7%A7%D7%98%D7%95%D7%A8%D7%99">קישור</a></p>
 </section>
 <section id="האם-כל-מרחב-הוא-מרחב-אוקלידי" class="slide level2">
 <h2>האם כל מרחב הוא מרחב אוקלידי?</h2>
@@ -474,7 +474,8 @@
 <img data-src="https://upload.wikimedia.org/wikipedia/commons/1/14/Gravity_anomalies_on_Earth.jpg" class="r-stretch quarto-figure-center"><p class="caption">נחלת הכלל, https://commons.wikimedia.org/w/index.php?curid=479365</p></section>
 <section id="מישור-הייחוס-של-כדור-הארץ-שונה-ממרחב-אוקלידי-רגיל" class="slide level2">
 <h2>מישור הייחוס של כדור הארץ שונה ממרחב אוקלידי רגיל</h2>
-<p>למעשה, השימוש הוא ברשת גאוגרפית, הנמדדות בקווי רוחב (המבטאים מרחק מקו המשווה, 90 מעלות צפונה ו90 מעלות דרומה) וקווי אורך (המבאטים מרחק מקו גריניץ’, 180 מעלות מזרחה ו180 מעלות מערבה).</p>
+<p>למעשה, השימוש הוא ברשת גאוגרפית, הנמדדות בקווי רוחב (המבטאים זווית מקו המשווה, 90 מעלות צפונה ו90 מעלות דרומה) וקווי אורך (המבאטים זווית מקו גריניץ’, 180 מעלות מזרחה ו180 מעלות מערבה).</p>
+<p>למעשה - הגדרת הx והy שנמצאים על מישור היחוס היא בכלל בזויות, ולא במרחק מראשית הצירים.</p>
 
 <img data-src="https://upload.wikimedia.org/wikipedia/commons/e/ef/FedStats_Lat_long.svg" class="r-stretch quarto-figure-center"><p class="caption">By Unknown author - Vector version of public domain image https://web.archive.org/web/20140813074310/http://www.fedstats.gov/kids/mapstats/concepts_latlg.html, Public Domain, https://commons.wikimedia.org/w/index.php?curid=92353626</p><p>מה עושים? איך מתגברים על הפער?</p>
 </section>
@@ -543,6 +544,9 @@
 <p>כי בשביל להשתמש בתוכנה, אנחנו חייבים להבין שכל ייצוג של המרחב הוא דרך משקפיים מסוימות. אין ייצוג אובייקטיבי.</p>
 
 <img data-src="https://upload.wikimedia.org/wikipedia/commons/4/45/Blind_monks_examining_an_elephant.jpg" alt="מאת Hanabusa Itchō - image זה זמין במחלקת {{{division_name}}} תחת מספר מזהה: cph.3g08725.תבנית זו אינה מעידה על מצב זכויות היוצרים של היצירה. לתבנית זו יש לצרף תבנית רישיון מתאימה., נחלת הכלל, https://commons.wikimedia.org/w/index.php?curid=2265247" class="r-stretch quarto-figure-center"><p class="caption">ציור משנת 1888, של כמרים עיוורים הבוחנים פיל</p></section>
+<section id="הפסקה-מתודית" class="slide level2">
+<h2>הפסקה מתודית</h2>
+</section>
 <section id="מדידת-מרחקיםשטחים" class="slide level2">
 <h2>מדידת מרחקים/שטחים</h2>
 
@@ -566,19 +570,22 @@
 <p>נמצא בתוך הגדרות הפרויקט. מטרתו היחידה - לבחור היטל לפרויקט. ניתן לחפש היטל, או לבחור מהיטלים בהם משתמשים הרבה.</p>
 
 <img data-src="images/paste-4.png" class="r-stretch"></section>
-<section id="תרגיל-3" class="slide level2">
+<section id="תרגיל-3" class="slide level2 smaller">
 <h2>תרגיל 3</h2>
 <ol type="1">
 <li>פתחו פרויקט ריק</li>
 <li>קבעו את ההיטל בו הפרויקט עובד ל4326</li>
 <li>העלו שכבת בסיס של openstreetmap</li>
 <li>התמקדו לישראל</li>
-<li>מדדו את מרחק בין בניין מספר 4 במכללת תל חי מזרח לכנסת בירושלים, תחת אפשרות מדידה קרטזית</li>
+<li>מדדו את מרחק בין בניין מספר 4 במכללת תל חי מערב לקמפוס תל אביב של תל חי (רחוב הרצל 160), תחת אפשרות מדידה קרטזית</li>
 <li>רשמו את המרחק בק”מ</li>
 <li>השאירו את אותה המדידה, ושנו את מערכת הקואורדינטות ל2039</li>
 <li>רשמו את המרחק בק”מ</li>
 <li>השאירו את אותה המדידה, ושנו את מערכת הקואורדינטות ל3857</li>
 <li>רשמו את המרחק בק”מ</li>
+<li>העבירו את צורת המדידה לאליפסואידית</li>
+<li>רשמו את המרחק בק’“מ</li>
+<li>רשמו את התשובות לסעיפים 6,8,10 ו12 בקובץ וורד והעלו אותו למודל</li>
 </ol>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
