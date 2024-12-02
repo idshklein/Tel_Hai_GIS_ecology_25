@@ -96,7 +96,7 @@ now = new Date
 
 ![](images/paste-7.png)
 
-## תוויות
+## תוויות {.smaller}
 
 ניתן להוסיף תוויות בproperties של בשכבה, תחת labels. התוויות נקבעות לפי שם המשתנה בשכבה, בדומה לסימבולוגיה של שכבה.
 
@@ -116,13 +116,13 @@ now = new Date
 
 בפאנל השכבות:
 
-![](images/paste-1 copy.png){width="377"}
+![](images/paste-1%20copy.png){width="377"}
 
 ------------------------------------------------------------------------
 
 בתוך אפשרויות השכבה
 
-![](images/paste-2 copy.png){width="687"}
+![](images/paste-2%20copy.png){width="687"}
 
 כאשר אתם נמצאים בתוך סגנון - הוא יישמר אוטומטית כל עוד תבצעו פעולות שינוי סגנון.
 
@@ -130,11 +130,11 @@ now = new Date
 
 וכדומה בתוך אפשרויות השכבה
 
-![](images/paste-3 copy.png){width="316"}
+![](images/paste-3%20copy.png){width="316"}
 
 ## העתקת סגנון
 
-![](images/paste-4 copy.png)
+![](images/paste-4%20copy.png)
 
 ניתן להעתיק סגנון משכבה לשכבה במידה והעמודות זהות. למשל בין שתי שכבות לא קשורות בהכרח.
 
@@ -144,7 +144,7 @@ now = new Date
 
 איך נראה קובץ qml?
 
-![](images/paste-6 copy.png){width="214"}
+![](images/paste-6%20copy.png){width="214"}
 
 ------------------------------------------------------------------------
 
@@ -156,4 +156,8 @@ now = new Date
 
 [הורידו את הסגנון מכאן](https://www.gov.il/he/departments/general/symbology_qgis)
 
-## ![](images/paste-5 copy.png)
+## ![](images/paste-5%20copy.png)
+## ![](images/paste-14.png)
+
+## תרגיל
+השבוע לא יינתן תרגיל
