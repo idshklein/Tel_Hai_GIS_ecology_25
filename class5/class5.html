@@ -14,7 +14,7 @@
 
   <meta name="author" content="ד”ר עדו קליין">
   <meta name="dcterms.date" content="2024-02-12">
-  <title>gpkg וסימבולוגיה</title>
+  <title>gpkg, תוויות, סגנונות</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -397,7 +397,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">gpkg וסימבולוגיה</h1>
+  <h1 class="title">gpkg, תוויות, סגנונות</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -430,7 +430,9 @@
 <h2>בשיעור היום</h2>
 <ul>
 <li><p>נלמד איך טוענים פרויקט מgpkg</p></li>
-<li><p>נלמד כיצד לייצג שכבות</p></li>
+<li><p>נלמד איך לייצר GPKG</p></li>
+<li><p>נלמד איך לייצר תוויות</p></li>
+<li><p>נלמד איך לייצר סגנונות</p></li>
 </ul>
 </section>
 <section id="השלמת-חובות---טעינת-פרויקט-מgpkg" class="slide level2">
@@ -488,93 +490,56 @@
 <p>ניתן שם לפרויקט. יש אפשרות לשמור מספר פרויקטים בתוך GPKG אחד.</p>
 
 <img data-src="images/paste-7.png" class="r-stretch"></section>
-<section id="עבודה-עם-פאנל-העיצוב---עברנו-על-כך-בשיעור-הקודם" class="slide level2">
-<h2>עבודה עם פאנל העיצוב - עברנו על כך בשיעור הקודם</h2>
-<p>שתי דרכי גישה אל פאנל העיצוב:</p>
-
-<img data-src="images/paste-27.png" width="551" class="r-stretch"></section>
-<section class="slide level2">
-
-
-<img data-src="images/paste-28.png" class="r-stretch"></section>
-<section class="slide level2">
-
-<p>בחלון נפרד</p>
-
-<img data-src="images/paste-29.png" class="r-stretch"></section>
-<section id="סימול-אחיד" class="slide level2">
-<h2>סימול אחיד</h2>
-<p>התוכנה מאפשרת לנו לבצע סימולים אחידים עבור כל השכבה. במידה ואנחנו לא רוצים להיכנס לפרטים, ניתן לעשות קוסטימיזציה למאפיינים בסיסיים כמו גודל, צבע, שקיפות וזווית. ניתן גם לבחור סגנון קבוע מראש.</p>
-
-<img data-src="images/paste-30.png" width="551" class="r-stretch"></section>
-<section id="סימול-מורכב-יותר" class="slide level2">
-<h2>סימול מורכב יותר</h2>
-<p>במידה ולוחצים על simple marker, אפשר לשפר את השליטה בסימון הנקודה.</p>
-
-<img data-src="images/paste-31.png" width="551" class="r-stretch"></section>
-<section class="slide level2">
-
-<p>יש הרבה מאוד אפשרויות סגנון, ניתן להעלות סוגים שונים של מרקרים מתמונות וכו’. מדובר בעולם תוכן שלם, ולא ניגע בו בקורס זה, שכן הוא כולל הרבה מאוד למידה עצמית, והוא מאוד תלוי למה שרוצים להשיג.</p>
+<section id="תוויות" class="slide level2">
+<h2>תוויות</h2>
+<p>ניתן להוסיף תוויות בproperties של בשכבה, תחת labels. התוויות נקבעות לפי שם המשתנה בשכבה, בדומה לסימבולוגיה של שכבה.</p>
+<p><img data-src="images/paste-12.png"></p>
+<p><img data-src="images/paste-13.png"></p>
+<p>כלל יתר ההגדרות או מתקדמות ולא יכוסו בקורס זה, או דומות לסגנונות שניתן לתת במעבד תמלילים, כמו פונט, גודל פונט, מודגש/איטלקי/קו תחתון, צבע. לימוד יתר ההגדרות בזמנכם הפנוי.</p>
 </section>
-<section id="סימול-לפי-קטגוריות---חזרה-על-החומר-הנלמד-בשיעור-הקודם" class="slide level2">
-<h2>סימול לפי קטגוריות - חזרה על החומר הנלמד בשיעור הקודם</h2>
-<p>על מנת להדגים, נוריד את שכבת סוגי האוכלוסיה בירושלים מכאן:</p>
-<p><a href="https://data.gov.il/dataset/taz_jer_pop_type" class="uri">https://data.gov.il/dataset/taz_jer_pop_type</a></p>
-<p>נשנה את הבחירה בדרופדאון העליון לcategorized</p>
-
-<img data-src="images/paste-32.png" width="551" class="r-stretch"></section>
-<section id="תזכורת" class="slide level2">
-<h2>תזכורת!</h2>
-<p>כל שכבה היא טבלה. בכל טבלה יש עמודות שונות. נלמד בהמשך הקורס לעומק על הישויות ועל סינון ושליטה במידע. אבל בינתיים - חשוב להכיר את טבלת הישויות - attribute table. פאנל layers -&gt; כפתור ימני על השכבה הרצויה -&gt; attribute table</p>
-<p>השליטה הבסיסית כאן היא:<br>
-על בסיס איזה משתנה מחלקים לקטגוריות. qgis מציין אם המשתנה הוא מספרי או טקסטואלי, ובכך מסייע בבחירה <img data-src="images/paste-8.png"></p>
+<section id="ניהול-סגנונות" class="slide level2">
+<h2>ניהול סגנונות</h2>
+<p>עבור כל שכבה, ניתן לשמור על מספר שונה של סגנונות. שמירה על מספר שונה של סגנונות מאפשר יצירת סדר ותיעוד של תהליך העבודה.</p>
 </section>
+<section id="יצירת-סגנון" class="slide level2">
+<h2>יצירת סגנון</h2>
+<p>שתי דרכים ליצירת סגנון:</p>
+<p>בפאנל השכבות:</p>
+
+<img data-src="images/paste-1%20copy.png" width="377" class="r-stretch"></section>
 <section class="slide level2">
 
-<p>שימו לב! תמיד יש ללחוץ על כפתור הclassify על מנת לחלק לרמות השונות</p>
+<p>בתוך אפשרויות השכבה</p>
 
-<img data-src="images/paste-9.png" class="r-stretch"></section>
-<section id="סימול-לפי-משתנה-רציף---אוטומטי" class="slide level2">
-<h2>סימול לפי משתנה רציף - אוטומטי</h2>
-<p>על מנת לתרגל את הנ”ל, נוריד את שכבת צפיפות מקומות עבודה ארצית:</p>
-<p><a href="https://data.gov.il/dataset/2030" class="uri">https://data.gov.il/dataset/2030</a></p>
-<p>דומה מאוד לסימון לפי משתנה קטגוריאלי, בשינוי משמעותי אחד - השליטה בחלוקה לרמות. ניתן לבצע אותה בצורה אוטומטית או ידנית:</p>
-<p>בצורה אוטומטית, יש ללחוץ על תפריט mode (לאחר שבחרנו את המשתנה ולחצנו על classify), ולבחור את צורת החלוקה בין הנתונים.</p>
-
-<img data-src="images/paste-35.png" class="r-stretch"></section>
-<section id="צורות-חלוקה-של-מידע" class="slide level2">
-<h2>צורות חלוקה של מידע</h2>
-<ol type="1">
-<li><p>x-ונים - כמות שווה של דגימות בכל קבוצה (חציונים, רביעונים, חמישונים, עשירונים וכו’)</p></li>
-<li><p>מרווח שווה בין הערכים (נניח שסט הערכים בין 0 ל10, ואנו מחלקים בחמש, החלוקות יהיו במספרים הזוגיים)</p></li>
-<li><p>סקאלה לוגרתמית - חלוקה שווה בין החזקות הלוגרתמיות</p></li>
-<li><p>הפסקות טבעיות - מבוססות אלגורתם jenks (ממזער שונות בתוך הקבוצה, ממקסם שונות בין הקבוצות)</p></li>
-<li><p>הפסקות יפות - מבוססות עיגול ערכים</p></li>
-<li><p>חלוקה מבוססת מיקום הדגימה בהתחשב מהסטייה של הנתון מהממוצע</p></li>
-</ol>
+<img data-src="images/paste-2%20copy.png" width="687" class="r-stretch"><p>כאשר אתם נמצאים בתוך סגנון - הוא יישמר אוטומטית כל עוד תבצעו פעולות שינוי סגנון.</p>
 </section>
+<section id="החלפת-סגנון" class="slide level2">
+<h2>החלפת סגנון</h2>
+<p>וכדומה בתוך אפשרויות השכבה</p>
+
+<img data-src="images/paste-3%20copy.png" width="316" class="r-stretch"></section>
+<section id="העתקת-סגנון" class="slide level2">
+<h2>העתקת סגנון</h2>
+
+<img data-src="images/paste-4%20copy.png" class="r-stretch"><p>ניתן להעתיק סגנון משכבה לשכבה במידה והעמודות זהות. למשל בין שתי שכבות לא קשורות בהכרח.</p>
+</section>
+<section id="ייבוא-סגנונות" class="slide level2">
+<h2>ייבוא סגנונות</h2>
+<p>ניתן לייבא סגנונות מקבצי qml, המכיל בתוכו סגנון קבוע מראש -שבא לחסוך לנו הרבה עבודה.</p>
+<p>איך נראה קובץ qml?</p>
+
+<img data-src="images/paste-6%20copy.png" width="214" class="r-stretch"></section>
 <section class="slide level2">
 
-<p>כפתור הclasses מאפשר לנו לחלק את הדאטה לכמות הרמות הרצויה.</p>
-<p>שימוש בhistogram מאפשר לנו לראות כיצד הדאטה מתפלג, ומסייע בהבנה של איך יהיה חכם לייצג אותו בצורה לא מרחבית. ניתן אף להוסיף רמות על ידי לחיצה על המקום בהיסטוגרמה בו רוצים להוסיף, או לשנות גבולות על ידי הזזת הקווים על ההיסטוגרמה. (לא לשכוח ללחוץ על load values בהתחלה)</p>
-
-<img data-src="images/paste-36.png" width="400" class="r-stretch"></section>
-<section id="סימול-לפי-משתנה-רציף---ידני" class="slide level2">
-<h2>סימול לפי משתנה רציף - ידני</h2>
-<p>ניתן גם לחלק לרמות שונות בצורה ידנית - בחירת המשתנה, הוספת רמות באמצעות לחיצה על כפתור הפלוס, בחירה הרמה הרצויה, ודאבל קליק על עמודת הvalues.<br>
-שם יש לציין גבול תחתון ועליון לרמת הייצוג.<br>
-במידה ויש כמה רמות, הגבולות בין הרמה לרמות האחרות ישתנו בהתאם לשינוי שמבצעים ברמה.<br>
-יש לבחור צבעים לכל רמה על ידי דאבל קליק על עמודת symbol,וגם לשנות את התגית של הקבוצה על ידי דאבל קליק על השדה בעמודת legend.</p>
+<p>בקובץ qml יש הגדרות שונות לסגנון המאפשרות ייצוג שונה של ישויות בשכבה.</p>
 </section>
-<section id="תרגיל-4" class="slide level2">
-<h2>תרגיל 4</h2>
-<ol type="1">
-<li><p>הורידו את הGPKG מהאתר</p></li>
-<li><p>פתחו את פרויקט project, לא את P</p></li>
-<li><p>ייצגו את המבנים במפה לפי שנת הבנייה שלהם בסקאלה רציונלית וצלמו את המסך</p></li>
-<li><p>ייצגו את המבנים במפה לפי מספר הקומות שלהם בסקאלה אורדינלית וצלמו את המסך</p></li>
-<li><p>העלו את צילומי המסך למודל</p></li>
-</ol>
+<section id="סגנון-מבאת-לדוגמא" class="slide level2">
+<h2>סגנון מבאת לדוגמא</h2>
+<p>הדגמה מאתר <a href="https://ags.iplan.gov.il/xplan/">קווים כחולים</a></p>
+<p><a href="https://www.gov.il/he/departments/general/symbology_qgis">הורידו את הסגנון מכאן</a></p>
+</section>
+<section id="section" class="slide level2">
+<h2><img data-src="images/paste-5%20copy.png"></h2>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
