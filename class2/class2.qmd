@@ -333,7 +333,7 @@ df |>
 
 בשלב זה, נפתח את מיקום הקובץ שהורדנו בסייר הקבצים, ופשוט נגרור אותו לתוך התוכנה, כפי שמודגם בסרטון:
 
-![](images/Untitled video - Made with Clipchamp.gif){width="500"}
+![](images/Untitled%20video%20-%20Made%20with%20Clipchamp.gif){width="500"}
 
 ## שכבת בסיס
 
