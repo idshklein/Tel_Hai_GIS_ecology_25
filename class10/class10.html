@@ -11,8 +11,8 @@
   <meta name="generator" content="quarto-1.4.537">
 
   <meta name="author" content="ד”ר עדו קליין">
-  <meta name="dcterms.date" content="2024-03-18">
-  <title>מקורות מידע, רסטרים וסיכום הקורס</title>
+  <meta name="dcterms.date" content="2025-01-13">
+  <title>צירופים + מקורות מידע</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -395,7 +395,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">מקורות מידע, רסטרים וסיכום הקורס</h1>
+  <h1 class="title">צירופים + מקורות מידע</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -405,7 +405,7 @@
 </div>
 </div>
 
-  <p class="date">2024-03-18</p>
+  <p class="date">2025-01-13</p>
 </section>
 <section class="slide level2">
 
@@ -427,11 +427,370 @@
 <section id="בשיעור-היום" class="slide level2">
 <h2>בשיעור היום</h2>
 <ul>
+<li><p>נבין מהו צירוף וכיצד מבצעים אותו</p></li>
 <li><p>נלמד על מקורות מידע גאוגרפיים בישראל ובעולם</p></li>
-<li><p>נלמד על רסטרים על קצה המזלג</p></li>
-<li><p>נלמד איך לעגן רסטר</p></li>
-<li><p>נסכם את הקורס</p></li>
 </ul>
+</section>
+<section id="על-צירוף-טבלאי---השלמה" class="slide level2">
+<h2>על צירוף טבלאי - השלמה</h2>
+<p>בשיעור הקודם למדנו כיצד מבצעים צירוף מרחבי בין שתי שכבות.<br>
+עם זאת, חלק מהיחסים לא הוגדרו כמו שצריך. לכן כעת נעמיק בנושא זה</p>
+</section>
+<section id="צירוף-טבלאי---יחסים" class="slide level2">
+<h2>צירוף טבלאי - יחסים</h2>
+<p>צירופים טבלאיים מתייחסים לאופן שבו טבלאות נתונים משויכות זו לזו בבסיסי נתונים או במסגרת ניתוח נתונים:</p>
+<ol type="1">
+<li><p>אחד לאחד (1:1): לכל שורה בטבלה הראשונה יש שורה אחת מתאימה בטבלה השנייה ולהפך. דוגמה: טבלת משתמשים וטבלת פרופילים, כאשר לכל משתמש יש פרופיל יחיד.</p></li>
+<li><p>אחד לרבים (1:N): לכל שורה בטבלה הראשונה יכולות להיות מספר שורות מתאימות בטבלה השנייה, אך לכל שורה בטבלה השנייה יש שורה אחת מתאימה בטבלה הראשונה. דוגמה: טבלת משתמשים וטבלת הזמנות, כאשר משתמש אחד יכול לבצע מספר הזמנות.</p></li>
+</ol>
+</section>
+<section class="slide level2">
+
+<ol start="3" type="1">
+<li>רבים לרבים (M:N): לכל שורה בטבלה הראשונה יכולות להיות מספר התאמות בטבלה השנייה ולהפך. קשר כזה מתבצע בדרך כלל דרך טבלת קשרים (junction table). דוגמה: טבלת סטודנטים וטבלת קורסים, כאשר סטודנט יכול להירשם למספר קורסים וכל קורס כולל מספר סטודנטים.</li>
+</ol>
+<p>השימוש בכל סוג קשר תלוי במבנה הנתונים ובקשרים הלוגיים בין הישויות המיוצגות בטבלאות.</p>
+</section>
+<section id="דוגמאות" class="slide level2">
+<h2>דוגמאות</h2>
+<h3 id="אחד-לאחד-11"><strong>אחד לאחד (1:1)</strong></h3>
+<h4 id="טבלת-משתמשים">טבלת משתמשים:</h4>
+<table>
+<thead>
+<tr class="header">
+<th>UserID</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Alice</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Bob</td>
+</tr>
+</tbody>
+</table>
+<h4 id="טבלת-פרופילים">טבלת פרופילים:</h4>
+<table>
+<thead>
+<tr class="header">
+<th>ProfileID</th>
+<th>UserID</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td>alice@email.com</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>2</td>
+<td>bob@email.com</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h4 id="טבלה-מקושרת-join">טבלה מקושרת (Join):</h4>
+<table>
+<thead>
+<tr class="header">
+<th>UserID</th>
+<th>Name</th>
+<th>ProfileID</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Alice</td>
+<td>1</td>
+<td>alice@email.com</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Bob</td>
+<td>2</td>
+<td>bob@email.com</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h3 id="אחד-לרבים-1n"><strong>אחד לרבים (1:N)</strong></h3>
+<h4 id="טבלת-משתמשים-1">טבלת משתמשים:</h4>
+<table>
+<thead>
+<tr class="header">
+<th>UserID</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Alice</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Bob</td>
+</tr>
+</tbody>
+</table>
+<h4 id="טבלת-הזמנות">טבלת הזמנות:</h4>
+<table>
+<thead>
+<tr class="header">
+<th>OrderID</th>
+<th>UserID</th>
+<th>OrderDate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>101</td>
+<td>1</td>
+<td>2025-01-01</td>
+</tr>
+<tr class="even">
+<td>102</td>
+<td>1</td>
+<td>2025-01-05</td>
+</tr>
+<tr class="odd">
+<td>103</td>
+<td>2</td>
+<td>2025-01-03</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h4 id="טבלה-מקושרת-join-1">טבלה מקושרת (Join):</h4>
+<table>
+<thead>
+<tr class="header">
+<th>UserID</th>
+<th>Name</th>
+<th>OrderID</th>
+<th>OrderDate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Alice</td>
+<td>101</td>
+<td>2025-01-01</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Alice</td>
+<td>102</td>
+<td>2025-01-05</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Bob</td>
+<td>103</td>
+<td>2025-01-03</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h3 id="רבים-לרבים-mn"><strong>רבים לרבים (M:N)</strong></h3>
+<h4 id="טבלת-סטודנטים">טבלת סטודנטים:</h4>
+<table>
+<thead>
+<tr class="header">
+<th>StudentID</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Alice</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Bob</td>
+</tr>
+</tbody>
+</table>
+<h4 id="טבלת-קורסים">טבלת קורסים:</h4>
+<table>
+<thead>
+<tr class="header">
+<th>CourseID</th>
+<th>CourseName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>101</td>
+<td>Mathematics</td>
+</tr>
+<tr class="even">
+<td>102</td>
+<td>Computer Science</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h4 id="טבלת-קשרים-רישום-לקורסים">טבלת קשרים (רישום לקורסים):</h4>
+<table>
+<thead>
+<tr class="header">
+<th>StudentID</th>
+<th>CourseID</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>101</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>102</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>101</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h4 id="טבלה-מקושרת-join-2">טבלה מקושרת (Join):</h4>
+<table>
+<thead>
+<tr class="header">
+<th>StudentID</th>
+<th>Name</th>
+<th>CourseID</th>
+<th>CourseName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Alice</td>
+<td>101</td>
+<td>Mathematics</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Alice</td>
+<td>102</td>
+<td>Computer Science</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Bob</td>
+<td>101</td>
+<td>Mathematics</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="כיצד-נבצע-צירוף-טבלאי-באמצעות-התוכנה" class="slide level2">
+<h2>כיצד נבצע צירוף טבלאי באמצעות התוכנה?</h2>
+<p>קיימות מספר דרכים לביצוע צירוף:</p>
+<ol type="1">
+<li>בהגדרות השכבה</li>
+<li>באמצעות אלגוריתמים של כלי העיבוד</li>
+</ol>
+</section>
+<section id="צירוף-בהגדרות-השכבה" class="slide level2">
+<h2>צירוף בהגדרות השכבה</h2>
+
+<img data-src="images/paste-13.png" width="501" class="r-stretch"><p>הוספת צירוף</p>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/paste-16.png" class="r-stretch"></section>
+<section id="תוצאה" class="slide level2">
+<h2>תוצאה</h2>
+<p>לפני</p>
+<p><img data-src="images/paste-17.png"></p>
+<p>אחרי</p>
+<p><img data-src="images/paste-18.png"></p>
+</section>
+<section id="אפשרויות-נוספות" class="slide level2">
+<h2>אפשרויות נוספות</h2>
+
+<img data-src="images/paste-19.png" width="610" class="r-stretch"><p>מחיקת צירוף<br>
+עריכת צירוף</p>
+</section>
+<section id="מגבלות" class="slide level2">
+<h2>מגבלות</h2>
+<p>מאפשר אך ורק צירוף של אחד לאחד</p>
+<p>מאפשר צירוף רק לפי שדה אחד ולא יותר</p>
+</section>
+<section id="צירוף-באמצעות-אלגוריתמים" class="slide level2">
+<h2>צירוף באמצעות אלגוריתמים</h2>
+
+<img data-src="images/paste-20.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="images/paste-22.png" class="r-stretch"></section>
+<section id="צירוף-מרחבי---יותר-מורכב-משחשבנו" class="slide level2">
+<h2>צירוף מרחבי - יותר מורכב משחשבנו</h2>
+<p>בשיעור הקודם למדנו על צירוף מרחבי “פשוט”.</p>
+<p>קיימים עוד סוגים רבים של צירוף מרחבי:</p>
+<p>לפי מרחק</p>
+<p>צירוף ויזואלי בין שתי שכבות</p>
+<p>רבים לרבים (למעשה הצלבה)</p>
+</section>
+<section id="תזכורת---צירוף-מרחבי-פשוט" class="slide level2">
+<h2>תזכורת - צירוף מרחבי פשוט</h2>
+<p>ניתן להצמיד ישויות לפי היחס המרחבי ביניהן. היינו להגיד - עבור נקודות המצטלבות עם הפוליגון, עם איזה פוליגון הן מצולבות</p>
+
+<img data-src="images/paste1-28.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="images/paste1-29.png" class="r-stretch"></section>
+<section id="צירוף-לפי-מרחק" class="slide level2">
+<h2>צירוף לפי מרחק</h2>
+
+<img data-src="images/paste-23.png" class="r-stretch"></section>
+<section id="צירוף-ויזואלי-בין-שתי-שכבות" class="slide level2">
+<h2>צירוף ויזואלי בין שתי שכבות</h2>
+
+<img data-src="images/paste-24.png" class="r-stretch"></section>
+<section id="הצלבה---צירוף-רבים-לרבים" class="slide level2">
+<h2>הצלבה - צירוף רבים לרבים</h2>
+
+<img data-src="images/paste1-30.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="images/paste1-32.png" class="r-stretch"></section>
+<section id="מקורות-מידע" class="slide level2">
+<h2>מקורות מידע</h2>
+<p>בשביל לעבוד עם ממ”ג אין סיבה לייצר לבד את הנתונים.</p>
+<p>יש נתונים רבים הזמינים ברשת עבור כל מי שצריך.</p>
+<p>שימוש בנתונים ממקורות אחידים מסייע בהשגת אמת אחת עבור ארגונים ובמיוחד בעבודה בין ארגונית.</p>
 </section>
 <section id="צפייני-gis-עירונייםארגוניים" class="slide level2">
 <h2>צפייני GIS עירוניים/ארגוניים</h2>
@@ -446,136 +805,46 @@
 <p>במקרים רבים עיריות מנגישות את המידע דרך service גאוגרפי, לרוב של esri</p>
 
 <img data-src="images/paste-4.png" class="r-stretch"></section>
+<section id="מערכות-ארגוניות" class="slide level2">
+<h2>מערכות ארגוניות</h2>
+</section>
 <section id="טעינת-שכבות-מתוך-סרויס" class="slide level2">
 <h2>טעינת שכבות מתוך סרויס</h2>
 <p>נקבל כתובת של סרויס (כרגע לא נלמד כיצד להשיג אותה בכוחות עצמנו. לפרטים נוספים <a href="https://idshklein.github.io/amav_qgis/lesson_5/qgis5.html#(4)">כאן</a>)</p>
 <p>למשל, שכבות עיריית ירושלים:</p>
 <p><a href="https://gisviewer.jerusalem.muni.il/arcgis/rest/services/" class="uri">https://gisviewer.jerusalem.muni.il/arcgis/rest/services/</a></p>
-</section>
+
+<img data-src="images/paste-25.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="images/paste-26.png" width="753" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="images/paste-27.png" class="r-stretch"></section>
 <section id="openstreetmap" class="slide level2">
 <h2>openstreetmap</h2>
+<p>ה”ויקיפדיה” של המפות. המידע שם נתרם על ידי המשתמשים עצמם + ארגונים ששחררו את המידע.</p>
+<p>המידע הינו חופשי לשימוש הכלל.</p>
+<p>מבנה הנתונים שונה ממבנה ממ”גי טבלאי המוכר לנו, עם זאת לא נעמיק בו.</p>
 <p>כבר דיברנו עליו במהלך הקורס מספר פעמים. ניתן להוריד מידע באמצעות התוכנה ישירות ממנו באמצעות תוסף quickosm. לא נרחיב בנושא כאן אלא רק בהדגמה בשיעור.</p>
 </section>
-<section id="רסטר" class="slide level2">
-<h2>רסטר</h2>
+<section id="דאטה-גוב" class="slide level2">
+<h2>דאטה גוב</h2>
+<p>אתר ישראלי המכיל הרבה מאוד נתונים, בין היתר נתונים מרחביים.</p>
+<p>מתעדכן תדיר.</p>
+<p>הדגמה של מספר הורדות מהאתר.</p>
 </section>
-<section id="למה-רסטר" class="slide level2">
-<h2>למה רסטר?</h2>
-<p>כי לפעמים מידע וקטורי לא מתאים לשמירה או עיבוד זריז של נתונים.</p>
-</section>
-<section id="הבדלים-מהותיים-בין-רסטר-ווקטור" class="slide level2">
-<h2>הבדלים מהותיים בין רסטר ווקטור</h2>
-<p>רסטר - שמירת הנתונים בצורה של טבלה עם ערך אחד, בניגוד לקובץ וקטורים המכיל ישויות גאוגרפיות שונות באמצעות מערך נקודות, שיכול לקבל ערכים רבים.</p>
-<p>ברסטר - כל ריבוע הוא ישות, למעשה, אבל כל ישות זהה לחברותיה מבחינת מימדים.</p>
-</section>
-<section id="טעינת-שכבות-רסטריות" class="slide level2">
-<h2>טעינת שכבות רסטריות</h2>
-<p>שכבות רסטריות יגיעו בקבצים בסיומות שונות. tif היא סיומת יחסית רגילה עבור קבצים רסטרים. עם זאת - ניתן לשמור רסטר בתוך GPKG, ועל כך בהמשך.</p>
-<p>שכבה רסטרית לדוגמא קיימת באתר הקורס.</p>
-</section>
-<section id="עיגון-רסטר-בתאוריה" class="slide level2">
-<h2>עיגון רסטר בתאוריה</h2>
-<p>בעיגון רסטר, הכוונה היא לקיחת תמונה/מפה שקיימת בתמונה ולעגן אותה בצורה דיגטלית למרחב, כך שיהיה ניתן לצפות בה יחד עם נתונים וקטוריים באותה התמונה, ולערוך חישובים המפיקים תוצאה מרחבית ברורה.</p>
-<p>על מנת לעגן רסטר, יש צורך בבחירה של לפחות 3 נקודות על גבי התמונה</p>
-</section>
-<section id="עיגון-רסטר-בפועל" class="slide level2">
-<h2>עיגון רסטר בפועל</h2>
-
-<img data-src="images/paste-1.png" class="r-stretch"><p>הכניסה למעגן הרסטרים (georefrencer) היא דרך תפריט השכבה.</p>
-</section>
-<section class="slide level2">
-
-<p>כך נראה חלון העיגון.</p>
-
-<img data-src="images/paste-2.png" class="r-stretch"></section>
-<section class="slide level2">
-
-
-<img data-src="images/paste-3.png" class="r-stretch"><p>הכפתור החשוב בהקשר זה - הוספת רסטר</p>
-</section>
-<section id="בחירת-נקודות-עיגון" class="slide level2">
-<h2>בחירת נקודות עיגון</h2>
-
-<img data-src="images/paste-5.png" class="r-stretch"></section>
-<section class="slide level2">
-
-<p>הוספת נקודות עיגון - בין אם על ידי כתיבה ובין אם על ידי בחירה מהמפה.</p>
-
-<img data-src="images/paste-6.png" class="r-stretch"></section>
-<section id="תוצאה-זמנית" class="slide level2">
-<h2>תוצאה זמנית</h2>
-
-<img data-src="images/paste-7.png" class="r-stretch"></section>
-<section id="שקיפותבלנד-מוד" class="slide level2">
-<h2>שקיפות/בלנד מוד</h2>
-<p>בשביל לראות מה יש מתחת למפה - צריך או להשקיף את התמונה - properties -&gt; transparency -&gt; סליידר עליון.</p>
-<p>אפשר גם להשקיף באמצעות בלנד מוד - תפריט הסימבולוגיה - <img data-src="images/paste-8.png"></p>
-</section>
-<section class="slide level2">
-
-<p><img data-src="images/paste-9.png" width="363"></p>
-<p>דברים שמגלים באמצעות מיפוי כזה - רחוב ירמיהו בירושלים היה פעם בכלל במקום אחר.</p>
-<p><img data-src="images/paste-10.png" width="363"></p>
-</section>
-<section id="שמירת-שכבה-רסטרית-בgpkg" class="slide level2">
-<h2>שמירת שכבה רסטרית בgpkg</h2>
-<p>דומה מאוד לשמירה של שכבה וקטורית:</p>
-<p>לחיצה ימנית</p>
-<p>export</p>
-<p>save as</p>
-<p>ובחירה בפורמט של gpkg.</p>
-<p>גם שם יש צורך בהגדרת שם השכבה.</p>
-</section>
-<section id="תרגיל-9" class="slide level2">
-<h2>תרגיל 9</h2>
+<section id="תרגיל-8" class="slide level2">
+<h2>תרגיל 8</h2>
 <ol type="1">
-<li>הורידו מפה של ירושלים מ<a href="https://merhav.nli.org.il/primo-explore/search?query=any,contains,%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99%D7%9D%20MAP&amp;sortby=lso01&amp;vid=NLI&amp;facet=searchcreationdate,include,1922%7C,%7C1948&amp;mfacet=tlevel,include,online_resources,1&amp;mfacet=topic,include,Jerusalem%20(Israel),1&amp;mfacet=creator,include,Survey%20of%20Palestine,2&amp;mfacet=creator,include,Great%20Britain%20Ordnance%20Survey,2&amp;mfacet=creator,include,Egypt%20Ma%E1%B9%A3la%E1%B8%A5at%20al-Mis%C4%81%E1%B8%A5ah,2&amp;mfacet=creator,include,Great%20Britain%20War%20Office%20General%20Staff%20Geographical%20Section,2&amp;mfacet=rtype,include,Map,3&amp;lang=iw_IL&amp;offset=0&amp;came_from=sort&amp;_gl=1*1vqiiuv*_ga*MTEzMDU0NTE1LjE2ODc0NjMzMjM.*_ga_8P5PPG5E6Z*MTcxMDY2NDc4OS40Ni4xLjE3MTA2NjUyNDIuNDIuMC4w*_ga_4207HLQSXF*MTcxMDY2NDc4OS40Ni4xLjE3MTA2NjUyNDIuNDIuMC4w*_ga_8PQRSYT854*MTcxMDY2NDc4OS40Ni4xLjE3MTA2NjUyNDIuNDIuMC4w">אוסף המפות על שם ערן לאור</a></li>
-<li>עגנו אותה באמצעות הגאורפרנסר</li>
-<li>התחברו ל<a href="https://gisviewer.jerusalem.muni.il/arcgis/rest/services/">סרויס של עיריית ירושלים</a></li>
-<li>הוסיפו את שכבת האנדרטאות</li>
-<li>שמרו בפרויקט שבתוך gpkg את השכבה של המפה כשכבה רסטרית,</li>
-<li>שמרו את סדר השכבות בפרויקט, כך ששכבת האנדרטאות נשאבת ישירות</li>
+<li><p>הורידו את קובץ התרגיל</p></li>
+<li><p>עשו חיץ של 100 מטרים על שכבת building (זכרו להמיר קודם את השכבה לרשת ישראל)</p></li>
+<li><p>בצעו הצלבה אל מול שכבת stops על מנת להבין אלו תחנות שייכות לאיזה מבנה.</p></li>
+<li><p>שמרו את שכבת הפלט בתוך הgpkg והגישו.</p></li>
+<li><p>למתקדמים - השתמשו בכלי <strong>Join by lines (hub lines) על מנת לסרטט קווים בין המבנה לבין התחנות שנמצאות ב100 המטרים ממנו</strong></p></li>
 </ol>
-</section>
-<section id="סיכום-הקורס---למדנו-על" class="slide level2">
-<h2>סיכום הקורס - למדנו על:</h2>
-<ul>
-<li><p>מהו מידע מרחבי</p></li>
-<li><p>מהן מערכות קואורדינטות</p></li>
-<li><p>מהי סימבולוגיה</p></li>
-<li><p>כיצד ממפים</p></li>
-<li><p>כיצד בוחרים מידע בשכבות</p></li>
-<li><p>כיצד עורכים שכבות ומייצרים שכבות חדשות</p></li>
-<li><p>כיצד מפעילים מניפולציות מרחביות</p></li>
-<li><p>כיצד שואבים מידע מרחבי</p></li>
-<li><p>כיצד מעגנים רסטר</p></li>
-</ul>
-</section>
-<section id="תרגיל-מסכם---עבודת-חקר-על-מידע-מרחבי" class="slide level2">
-<h2>תרגיל מסכם - עבודת חקר על מידע מרחבי</h2>
-<p>התמיינו לקבוצות של עד 3 אנשים.</p>
-<p>בחרו נושא למיפוי מרחבי, למשל -</p>
-<ul>
-<li><p>בחינה של השוני בין שכונות בחיפה</p></li>
-<li><p>השוואה היסטורית של מבנים בשכונת רחביה בירושלים</p></li>
-</ul>
-<p>או נושא שיאושר על ידי בפגישתנו.</p>
-<p>אנא התחלקו לקבוצות עד ה25.3, שלחו לי מייל הכולל את חברי הקבוצה.</p>
-<p>כל קבוצה תיקבע איתי פגישה לאישור הנושא ולבירור נוסף ככל שנצטרך</p>
-</section>
-<section class="slide level2">
-
-<p>יצרו פרויקט בqgis, בתוך קובץ gpkg המכיל את כלל האלמנטים הבאים:</p>
-<p>רשימת שכבות וסידורה</p>
-<p>לפחות 3 תמות של מפה</p>
-<p>לפחות מניפולציה מרחבית אחת או שכבה מקודדת ידנית</p>
-<p>לפחות 5 מפות שונות המתארות את התופעה הנחקרת</p>
-<p>לפחות 2 סימניות מרחביות</p>
-<p>יש להגיש את העבודה המסכמת עד ה21.4.24.</p>
-</section>
-<section id="סקר-שביעות-רצון" class="slide level2">
-<h2>סקר שביעות רצון</h2>
-<p>ביקשו ממני לתזכר. מתזכר. לא על חשבון השיעור.</p>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
