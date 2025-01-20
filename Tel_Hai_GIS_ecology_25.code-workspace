@@ -4,5 +4,10 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"github.copilot.enable": {
+			"quarto": true
+		},
+		"github.copilot.advanced": {}
+	}
 }
